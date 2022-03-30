@@ -29,11 +29,22 @@ data-bs-target="#loginModal">
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        ...
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
+       <form id="login-usuario-form">
+          <div class="mb-3">
+            <label for="name" class="col-form-label">Usuário:</label>
+            <input type="text" name="email" class="form-control" id="email"
+            placeholder="Digite o usuário">
+          </div>
+          <div class="mb-3">
+            <label for="senha class="col-form-label>Senha:</label>
+            <input type="password" class="form-control" id="senha"
+            placeholder="Digite asenha">
+          </div>
+          <div class="mb-3"> 
+              <input type="submit" class="btn btn-outline-primary bt-sm" 
+              id="login-usuario-btn" value="Acesar">
+          </div>
+        </form> 
       </div>
     </div>
   </div>
