@@ -52,6 +52,10 @@ data-bs-target="#loginModal">
 
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+<!-- Dica para conferir se arquivo abre corretamente, atualiza a pagina e depois
+ver código fonte da pagina, clique no arquivo custom.js, se ele abrir é por que 
+deu certo -->
+<script src="js/custom.js"></script>
 
 </body>
 </html>
