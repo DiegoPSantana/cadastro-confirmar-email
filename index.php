@@ -1,3 +1,26 @@
+<?php
+
+  // === Criando o banco de dados abaixo; 
+  // create database cadastro_confirmar;
+
+  // use database cadastro_confirmar;
+
+  // create table usuarios(
+
+  //   id int auto_increment primary key,
+  //   nome varchar(220),
+  //   email varchar(220),
+  //   senha varchar(220)
+  // );
+
+
+  // =====================================================Gerar senha
+  // Depois execute o navegador com uma senha 123456, para visualizar
+  // a senha criptografada, copie e depois salve sua senha no banco de
+  // dados
+  echo password_hash('123456', PASSWORD_DEFAULT);
+
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
