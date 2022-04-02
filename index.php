@@ -30,6 +30,7 @@ data-bs-target="#loginModal">
       </div>
       <div class="modal-body">
        <form id="login-usuario-form">
+         <span id="msgAlertErroLogin"></span>
           <div class="mb-3">
             <label for="name" class="col-form-label">Usuário:</label>
             <input type="text" name="email" class="form-control" id="email"
@@ -37,7 +38,7 @@ data-bs-target="#loginModal">
           </div>
           <div class="mb-3">
             <label for="senha class="col-form-label>Senha:</label>
-            <input type="password" class="form-control" id="senha"
+            <input type="password" name="senha" class="form-control" id="senha"
             placeholder="Digite asenha">
           </div>
           <div class="mb-3"> 
