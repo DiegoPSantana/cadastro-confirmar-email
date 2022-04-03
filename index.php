@@ -1,7 +1,7 @@
 <?php
 
   // Include para testar a conexão de banco de dados
-  include_once "conexao.php";
+  // include_once "conexao.php";
 
   // === Criando o banco de dados abaixo; 
   // create database cadastro_confirmar;
