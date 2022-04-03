@@ -4,6 +4,11 @@ include_once "conexao.php";
 
 $dados = filter_input_array(INPUT_POST, FILTER_DEFAULT);
 
+$dados = [
+    "email" => "diego_4palco@hotmail.com",
+    "senha" => "123456"
+];
+
 if(empty($dados['email'])){
     $retorna=['erro'=> true, 'msg'=>"<div class='alert alert-danger' 
     role='alert'>Erro Php usuário: Necessário preencher o campo usuário!</div>"];
@@ -12,7 +17,7 @@ if(empty($dados['email'])){
     role='alert'>Erro Php senha: Necessário preencher o campo senha!</div>" ];
 } else{
 
-    $query_usuario  = "SELECT id, nome, email 
+    $query_usuario  = "SELECT id, nome, email, senha 
                 FROM usuarios
                 WHERE email=:email
                 LIMIT 1";
@@ -21,8 +26,17 @@ if(empty($dados['email'])){
     $result_usuario->execute();
 
     if(($result_usuario) and ($result_usuario->rowCount() != 0)){
-      $retorna=['erro'=> false, 'msg'=>"<div class='alert alert-success' 
-      role='alert'>Validar!</div>" ];
+      
+      $row_usuario = $result_usuario->fetch(PDO::FETCH_ASSOC);
+      if(password_verify($dados['senha'], $row_usuario['senha'])){
+          $retorna=['erro'=> false, 'msg'=>"<div class='alert alert-success' 
+          role='alert'>Validar!</div>" ];
+      }else {
+          $retorna=['erro'=> true, 'msg'=>"<div class='alert alert-danger' 
+          role='alert'>Usuário ou a senha inválida!</div>" ];
+      }
+
+
     } else {
       $retorna=['erro'=> true, 'msg'=>"<div class='alert alert-danger' 
       role='alert'>Usuário ou a senha inválida!</div>" ];
