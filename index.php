@@ -1,5 +1,8 @@
 <?php
 
+  // Include para testar a conexão de banco de dados
+  include_once "conexao.php";
+
   // === Criando o banco de dados abaixo; 
   // create database cadastro_confirmar;
 
@@ -18,6 +21,7 @@
   // Depois execute o navegador com uma senha 123456, para visualizar
   // a senha criptografada, copie e depois salve sua senha no banco de
   // dados
+
   echo password_hash('123456', PASSWORD_DEFAULT);
 
 ?>
